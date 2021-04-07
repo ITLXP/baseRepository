@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dom对象</title>
+	<script>
+	function fun(){
+		var obj=document.getElementById("div1");
+		//obj.parentNode.style.background="yellow";这是改变div1的父标签的；背景颜色。
+		//obj.previousSibling.previousSibling.style.background="yellow";//这是改变div1前面一个元素的背景颜色，注意：空格也是背景颜色。
+		//obj.parentNode.nextSibling.nextSibling.style.background="yellow";//这是改变123456的背景颜色
+		//obj.firstChild.nextSibling.style.background="yellow";//改变“div1的p标签”的背景颜色
+		//obj.lastChild.previousSibling.style.background="yellow";//改变“div1的p标签”的背景颜色
+		//obj.childNodes[1].style.background="yellow";//改变“div1的p标签”的背景颜色
+		var n=obj.childNodes.length;
+		alert(n);
+	}
+	</script>
+</head>
+<body>
+<div>
+	<p>段落标签</p>
+	<div id="div1">
+		这是div1的内容
+		<p>div1的p标签</p>
+	</div>
+	<a href="#">aaaa</a>
+</div>
+<div>
+123456
+</div>
+<input type="button" value="点击" onclick="fun()">
+	
+</body>
+</html>

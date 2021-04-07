@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>获取用户使用的浏览器</title>
+	<script>
+		window.onload=init;
+		function init(){
+			var obj=navigator.userAgent;
+			if(obj.indexOf("Firefox")!=-1){
+				alert("火狐")
+
+			}
+			else if(obj.indexOf("Chrome")!=-1){
+				alert("谷歌")
+
+			}
+			else{
+				alert("无法判断")
+			}
+
+		}
+	</script>
+</head>
+<body>
+	<input type="button" onclick="init()">
+</body>
+</html>

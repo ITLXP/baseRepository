@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>上传资源检查</title>
+	<script>
+	function fun1(){
+		var obj=document.getElementById("file1");
+		var name=obj.value;
+
+		var dian=name.lastIndexOf(".");
+
+		var str1=name.substr(dian+1);
+
+		var str2=str1.toLowerCase();
+
+		if(str2=="jpg" || str2=="png" ||str2=="gif"){
+			alert("照片上传成功！");
+
+		}
+		else{
+			alert("上传失败"); 
+		}
+
+
+
+	}
+	</script>
+</head>
+<body>
+	<input type="file" name="文件" id="file1">
+	<input type="button" value="提交" onclick="fun1()">
+	
+</body>
+</html>

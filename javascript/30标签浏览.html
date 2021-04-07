@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>标签浏览</title>
+	<style>
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		#div1{
+			border: 1px solid red;
+			width: 500px;
+			height: 250px;
+		}
+		#div1 ul li{
+			border: 1px solid yellow;
+			list-style: none;
+			float: left;
+			height: 50px;
+			width:98px;
+			text-align: center;
+			line-height: 50px; 
+		}
+		#li1,#li2,#li3,#li4{
+			display: none;
+		}
+		#li1{
+			display: block;
+		}
+	</style>
+	<script>
+	function showDiv(n,m){
+		hidDiv();
+		showBorder();
+		var obj=document.getElementById("li"+n);
+		obj.style.display="block";
+		
+		m.style.borderBottom="1px solid white";
+		
+
+
+
+	}
+	function hidDiv(){
+		for(var i=1;i<=4;i++){
+			var obj=document.getElementById("li"+i);
+			obj.style.display="none";
+		}
+	}
+	function showBorder(){
+		for(var i=1;i<=4;i++){
+			var obj=document.getElementById("d"+i);
+			obj.style.border="1px solid yellow";
+		}
+	}
+	</script>
+</head>
+<body>
+	<div id="div1">
+		<ul>
+			<li id="d1" onmouseover="showDiv(1,this)">国际新闻</li>
+			<li id="d2" onmouseover="showDiv(2,this)">国内新闻</li>
+			<li id="d3"  onmouseover="showDiv(3,this)">体育新闻</li>
+			<li id="d4"  onmouseover="showDiv(4,this)">娱乐新闻</li>
+			<li></li>
+		</ul>
+		<div id="li1">
+			国际新闻<br/>
+			特兰普又开始搞贸易战。<br>
+			美国军舰抵近南海骚扰。<br>
+		</div>
+		<div id="li2">
+			国内新闻<br>
+			2020高考录取可以查询。<br>
+			新冠肺炎疫苗投入量产。<br>
+		</div>
+		<div id="li3">
+			体育新闻<br>
+			科比2020没能如期抵达中国。<br>
+			2020奥运会将在日本如期举行。<br>
+		</div>
+		<div id="li4">
+			娱乐新闻<br>
+			王一博2020生日不少发圈祝贺<br>
+			蔡徐坤会唱、跳、rop、篮球、music。<br>
+		</div>
+	
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" onclick="star(event)">
+<head>
+	<meta charset="UTF-8">
+	<title>点星星</title>
+	<script>
+	function star(e){
+		var obj=document.createElement("img");//在body里面创建img标签
+		obj.src="img/3.jpg";
+		var w=Math.floor(Math.random()*80+20);//获取宽度20-100之间任意值
+		obj.width=w;
+		//找到鼠标的位置
+		var x=e.clientX;
+		var y=e.clientY;
+		obj.style.position="absolute";
+		obj.style.top=y+"px";
+		obj.style.left=x+"px";
+		document.body.appendChild(obj);//放到body里面
+
+	}
+
+	</script>
+</head>
+<body >
+	
+</body>
+</html>

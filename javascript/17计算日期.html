@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>计算活了多少天</title>
+	<script>
+	var borth=new Date("1997/4/4 6:6:6");//创建出生日期
+	var now = new Date();
+	var n1 = borth.getTime();//获取从1970到出生时的毫秒值
+	var n2 = now.getTime();//获取从1970到现在的毫秒值
+
+	var cha=n2-n1;
+	var day=cha/(86400*1000);
+
+	document.write("你活了"+Math.ceil(day)+"天了");
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

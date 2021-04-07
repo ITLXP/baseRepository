@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>二维数组最大值及其坐标</title>
+	<script>
+		var a=[
+		[12,32,34,45,56,67],
+		[65,34,14,87],
+		[34,56,91,12,34,56,72]
+
+	    ];
+	    //比较笨的方法
+	    /*
+	    var max=a[0][0];
+	    for(var i=0;i<a.length;i++){
+	    	for(var j=1;j<a[i].length;j++){
+	    		if(max<a[i][j]){
+	    			max=a[i][j];
+	    		}
+	    	}
+	    }
+	    document.write("最大值为："+max);
+	    for(var b=0;b<a.length;b++){
+	    	for(var c=0;c<a[b].length;c++){
+	    		if(a[b][c]==max){
+	    			document.write("<br/>这个最大值的坐标为：a"+"["+b+"]["+c+"]");
+	    		}
+	    	}
+	    }
+	    */
+	   var max=a[0][0];
+	   var left=0;
+	   var right=0;
+	   for(var i=0;i<a.length;i++){
+	   	for (var j=1;j<a[i].length;j++){
+	   		if(max<a[i][j]){
+	   			max=a[i][j];
+	   			left=i;
+	   			right=j;
+	   		}
+	   	}
+	   }
+	   document.write("最大值为："+max);
+	   document.write("<br/>这个最大值的坐标为：a"+"["+left+"]["+right+"]");
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

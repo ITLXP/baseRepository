@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>定时器</title>
+	<script>
+	window.onload=init;
+	function init(){
+
+		var n=Math.floor(Math.random()*10);
+		if(n%2==0){
+			window.setTimeout("alert(123)",2000);
+		}
+		else if (n%2!=0){
+			window.setInterval("alert(456)",3000);
+		}
+	}
+	
+	
+	</script>
+</head>
+<body>
+
+	
+</body>
+</html>

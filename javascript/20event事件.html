@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>event.target使用</title>
+	<script>
+		//老方法获取button的value值,这种方法有几个button就要写几个函数。
+		// function fun1(){
+		// 	var obj=document.getElementById("id1");
+		// 	alert(obj.value);
+		// }
+		// 通过event.target获取value值
+		function fun1(e){
+			alert(e.target.value);
+		}
+	</script>
+</head>
+<body>
+	<input type="button" id="id1" onclick="fun1(event)" value="button1">
+	<input type="button" id="id2" onclick="fun1(event)" value="button2">
+	<input type="button" id="id3" onclick="fun1(event)" value="button3">
+	
+</body>
+</html>

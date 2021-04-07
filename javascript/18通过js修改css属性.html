@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>通过js修改css属性</title>
+	<script>
+		function fun(){
+			var n=document.getElementById("div1");
+			
+			
+			n.style.background="pink";
+			n.style.fontSize="30px";
+			n.style.color="blue";
+			n.style.border="1px solid red";
+		}
+
+	</script>
+</head>
+<body>
+	<div id="div1" onmouseover="fun()">
+		12345
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>求1到n里面偶数的个数</title>
+	<script>
+	function oushu(n){
+		var num=0;
+		for(var i=1;i<=n;i++){
+			if(i%2==0){
+				num++;
+			}
+		}
+		return num;
+	}
+	var num=oushu(6);
+	document.write("1到n之间的偶数有："+num+"个");
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

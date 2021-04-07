@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css3属性选择器2</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.main{
+			width: 900px;
+			border: 1px solid blue;
+			margin: 10px auto;
+			border-collapse: collapse;
+
+		}
+		.main td{
+			border: 1px solid blue;
+			
+
+		}
+		
+		.main tr:nth-child(2n+1){
+			background-color: #99ccff;
+			font-size: 14px;
+			
+			
+		}
+		.main tr:nth-child(2n){
+			background-color: 336699;
+
+		}
+		
+	</style>
+</head>
+<body>
+	<div>
+		<table class="main">
+			<tr>
+				<td>产品id</td>
+				<td>产品名称</td>
+				<td>数量</td>
+				<td>价格</td>
+			</tr>
+			<tr>
+				<td>001</td>
+				<td>电脑</td>
+				<td>34</td>
+				<td>&yen;5000</td>
+			</tr>
+			<tr>
+				<td>002</td>
+				<td>手机</td>
+				<td>50</td>
+				<td>&yen;2000</td>
+			</tr>
+			<tr>
+				<td>001</td>
+				<td>电脑</td>
+				<td>34</td>
+				<td>&yen;5000</td>
+			</tr>
+			<tr>
+				<td>002</td>
+				<td>手机</td>
+				<td>50</td>
+				<td>&yen;2000</td>
+			</tr>
+			<tr>
+				<td>001</td>
+				<td>电脑</td>
+				<td>34</td>
+				<td>&yen;5000</td>
+			</tr>
+			<tr>
+				<td>002</td>
+				<td>手机</td>
+				<td>50</td>
+				<td>&yen;2000</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>二维数组的求和</title>
+	<script>
+	var a=[
+		[12,32,34,45,56,67],
+		[65,34,14,87],
+		[34,56,90,12,34,56,72]
+
+	];
+	var sum=0;
+	for(var i=0;i<a.length;i++){
+		for(var j=0;j<a[i].length;j++){
+			sum+=a[i][j];
+			document.write(sum+" ");
+		}
+	}
+
+	alert("这个二维数组的值为："+sum);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片切换</title>
+	<style>
+		#div1{
+			border:1px solid blue;
+			margin: 100px auto;
+			width: 850px;
+			float: left;
+			
+		}
+		#div1 ul,img{
+			
+			float: left;
+			
+		}
+		#div1 li{
+			border: 1px solid yellow;
+			list-style: none;
+			margin-top: 10px;
+			margin-left: 0px;
+			width:20px;
+			text-align: center;
+
+		}
+
+	</style>
+	<script>
+	//页面加载完成立即启动这个函数
+	window.onload=init;
+	var time;
+	function init(){
+		var l1=document.getElementById("id1");
+		l1.style.background="orange";
+		time=window.setInterval("tupian()",1000);//反复性定时器,2秒执行一次函数
+	}
+	var i=1;
+	//反复变换图片
+	function tupian(){
+		
+		i++;
+		if(i>6){
+			i=1;
+		}
+		var img=document.getElementById("d1");
+		img.src="img/"+i+".jpg";
+		//清除背景颜色
+		clearColor();
+		//获取这张图对应的li，把它背景图改成黄色
+		var color=document.getElementById("id"+i);
+		color.style.background="orange";
+		
+
+	}
+	//鼠标移动到图片停止播放
+	function stopimg(){
+		window.clearInterval(time);
+
+	}
+	//鼠标离开li上的背景变化
+	function goon(){
+		time=window.setInterval("tupian()",1000);//反复性定时器,2秒执行一次函数
+		clearColor();
+	}
+	//鼠标停在li上的背景变化
+	function stopTu(n,e){
+		var obj=document.getElementById("d1");
+		obj.src="img/"+n+".jpg";
+		window.clearInterval(time);
+		e.style.background="orange";
+	}
+	function clearColor(){
+		for(var j=1;j<=6;j++){
+		var color=document.getElementById("id"+j);
+		color.style.background="white";
+		}
+	}
+	</script>
+</head>
+<body>
+<div id="div1">
+	<img src="img/1.jpg" alt="图片1" id="d1" onmouseover="stopimg()" onmouseleave="goon(this)">
+	
+		<ul id="ul1">
+			<li id="id1" onmouseover="stopTu(1,this)" onmouseleave="goon()">1</li>
+			<li id="id2" onmouseover="stopTu(2,this)" onmouseleave="goon()">2</li>
+			<li id="id3" onmouseover="stopTu(3,this)" onmouseleave="goon()">3</li>
+			<li id="id4" onmouseover="stopTu(4,this)" onmouseleave="goon()">4</li>
+			<li id="id5" onmouseover="stopTu(5,this)" onmouseleave="goon()">5</li>
+			<li id="id6" onmouseover="stopTu(6,this)" onmouseleave="goon()">6</li>
+		</ul>
+	
+</div>	
+</body>
+</html>

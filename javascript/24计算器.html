@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>计算器</title>
+	<script>
+	function calculate(){
+	var obj1=document.getElementById("text1").value;
+	var obj2=document.getElementById("text2").value;
+	var obj3=document.getElementById("text3");
+	obj1=parseFloat(obj1);
+	obj2=parseFloat(obj2);
+	var fuhao=document.getElementById("id1").value;
+	if(fuhao=="+"){
+		obj3.value=obj1+obj2;
+	}
+	else if(fuhao=="-"){
+		obj3.value=obj1-obj2;
+	}
+	else if(fuhao=="*"){
+		obj3.value=obj1*obj2;
+	}
+	else{
+		
+		
+		obj3.value=obj1/obj2;	
+	}
+	}
+	</script>
+</head>
+<body>
+	<input type="text" id="text1">
+	<select id="id1">
+		<option value="+">+</option>
+		<option value="-">-</option>
+		<option value="*">*</option>
+		<option value="/">/</option>
+	</select>
+	<input type="text" id="text2">
+	=
+	<input type="text" id="text3">
+	<input type="button" value="计算" onclick="calculate()">
+	
+</body>
+</html>

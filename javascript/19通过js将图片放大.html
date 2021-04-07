@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js将图片放大</title>
+	<script>
+	function fun(){
+		var obj=document.getElementById('id2');
+		var w=obj.width;
+		obj.width=w*1.2;
+	}
+	function fun2(){
+		var obj=document.getElementById("id3");
+		obj.innerHTML="修改成功！";
+	}
+	</script>
+</head>
+<body>
+	<img src="img/3.jpg" id="id2">
+	<input type="button" onclick="fun()"><br/>
+	<div id="id3">
+		修改div里面的内容
+	</div>
+	<input type="button" value="修改内容" onclick="fun2()" >
+
+	
+</body>
+</html>

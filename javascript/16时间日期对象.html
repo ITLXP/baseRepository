@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>时间日期对象</title>
+	<script>
+	var n1 = new Date();
+	var n2 = new Date("1999/9/9 6:6:6");
+	var n3 = new Date(1999,9,9,9,9,9);
+	var n4 = new Date(391239127902);
+	document.write(n1.toLocaleString()+"<br/>");
+	document.write(n2.toLocaleString()+"<br/>");
+	document.write(n3.toLocaleString()+"<br/>");
+	document.write(n4.toLocaleString()+"<br/>");
+
+	var m1=n1.getFullYear();//获取年份
+	var m2=n1.getMonth();//获取月份，月份从0开始。
+	var m3=n1.getDate();//获取这个月的第几号。
+	
+	document.write(m1);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

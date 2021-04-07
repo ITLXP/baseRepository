@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>伪类</title>
+	<style type="text/css">
+		.div_1{
+			width: 400px;
+			margin: 20px auto;
+			border: 1px solid blue;
+		}
+		.div_1:first-line{
+			color: blue;
+		}
+		.div_1::after{
+			content:"末尾补充";
+		}
+	</style>
+</head>
+<body>
+	<div class="div_1">
+		php中文网ASP.NET视频课程包括:ASP.NET在线视频教程、ASP.NET从入门到精通实战视频、并提供ASP.NET代码实例边学习边操作,让你快速掌握ASP.NET开发技能。
+	</div>
+	
+</body>
+</html>

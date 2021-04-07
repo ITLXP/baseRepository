@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>onmousemove事件</title>
+	<style>
+		#d1{
+			background:black;
+			color: white;
+			height: 200px;
+			cursor: crosshair;
+
+		}
+	</style>
+	<script>
+	function fun(e){
+		var obj=document.getElementById("d1");
+		var x=e.clientX;	
+		var y=e.clientY;
+		obj.innerHTML="坐标为"+x+","+y;
+	}
+	</script>
+</head>
+<body>
+<div id="d1" onmousemove="fun(event)">
+	坐标为0,0
+</div>
+	
+</body>
+</html>

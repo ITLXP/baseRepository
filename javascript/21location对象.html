@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>location对象</title>
+	<style>
+		#id1{
+			font-size: 20px;
+			color: red;
+		}
+	</style>
+
+	<script>
+		// var loc=location.href;
+		// alert(loc);
+		
+		//location.href="http://www.baidu.com";
+		window.onload=init;
+		function init(){
+			window.setTimeout("replace()",5000);//定时器
+			window.setInterval("calculate()",1000);
+
+
+		}
+		function replace(){
+			location.replace("http://www.baidu.com");
+		}
+		function calculate(){
+			var obj=document.getElementById("id1");
+			var n=obj.innerHTML;
+			obj.innerHTML=n-1;
+		}
+
+	
+	</script>
+</head>
+<body>
+	<!--<input type="button" name="location" value="获取路径" onclick="fun()"> -->
+	页面将在<span id="id1"> 5</span>秒后自动跳转。
+</body>
+</html>
