@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一个盒子垂直居中的方式</title>
+    <style>
+        .father{
+            width: 800px;
+            border: 1px solid red;
+            height: 500px;
+            position: relative;
+
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+        .father .div1{
+            width: 200px;
+            height: 100px;
+            border: 1px solid gray;
+        }
+        .father .div1{
+            
+            
+            /* 必须知道具体宽高
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-top: -50px;
+            margin-left: -100px; */
+            
+            /* 
+            可以不知道具体宽高，但必须设置具体宽高
+            position: absolute;
+            top:0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto; */
+
+            /* 
+            不需要知道知道高度，但兼容性不是很好
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%); */
+
+            display: inline-block;
+
+
+        }
+
+        /* body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        } */
+    </style>
+</head>
+<body>
+    
+   <div class="father">
+    <div class="div1">
+        123
+    </div>
+   </div>
+ 
+        
+</body>
+</html>
